@@ -1,0 +1,18 @@
+<App>
+<!-- <Connection ux:Gloubl="Connection"> -->
+<JavaScript>
+    var connection = require('Connection');
+    module.exports = {
+        conn:connection.isConnected()
+    }
+    
+</JavaScript>
+
+<WhileTrue Value="{conn}">
+    <Text Alignment="Center" FontSize="20" Value="It is Connecting " />
+</WhileTrue>
+<WhileFalse Value="{conn}">
+    <Text Alignment="Center" FontSize="20" Value="It is Not Connecting " />
+</WhileFalse>
+
+</App>
